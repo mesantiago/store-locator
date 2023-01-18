@@ -1,7 +1,7 @@
-import * as User from './user';
-import * as Store from './store';
+import * as UserController from './user.controller';
+import * as StoreController from './store.controller';
 
 export {
-  User,
-  Store
+  UserController,
+  StoreController
 };

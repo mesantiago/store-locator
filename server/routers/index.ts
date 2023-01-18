@@ -1,6 +1,6 @@
 import { Express, Request, Response } from 'express';
-import stores from './stores';
-import users from './users';
+import storeRouter from './store.router';
+import userRouter from './user.router';
 
 const setupUnauthenticatedRouters = (router: Express): void => {
   router.get("/", (req: Request, res: Response) => {
@@ -12,8 +12,8 @@ const setupUnauthenticatedRouters = (router: Express): void => {
 };
 
 const setupRouters = (router: Express): void => {
-  router.use('/stores', stores);
-  router.use('/users', users);
+  router.use('/stores', storeRouter);
+  router.use('/users', userRouter);
 };
 
 export {
